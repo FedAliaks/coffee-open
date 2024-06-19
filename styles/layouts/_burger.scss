@@ -1,0 +1,31 @@
+.burger {
+  position: relative;
+  @extend %transition;
+}
+
+.burger-menu__container {
+  position: absolute;
+  @include flex-columns(
+    $flex-direction: column,
+    $align-items: center,
+    $gap: 40px,
+    $justify-content: flex-start
+  );
+  z-index: 5;
+  width: 100%;
+  min-height: 100vh;
+
+  right: -100%;
+  background-color: $color-background-body;
+  @extend %transition;
+}
+
+.burger-menu_open {
+  right: 0;
+}
+
+.body-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}

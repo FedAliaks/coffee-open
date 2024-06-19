@@ -1,0 +1,26 @@
+@import '../node_modules/normalize.css/normalize.css';
+@import './abstract/constants';
+@import './abstract/mixins';
+@import './abstract/placeholders';
+
+//base
+@import './base/base';
+@import './base/buttons';
+@import './base/icons';
+
+//Components
+@import './components/card';
+@import './components/enjoy-section';
+@import './components/favorites';
+@import './components/about';
+@import './components/mobile';
+@import './components/modal';
+
+//pages
+@import './pages/menu-page/components/menu';
+
+//layouts
+@import './layouts/header';
+@import './layouts/wrapper';
+@import './layouts/footer';
+@import './layouts/burger';

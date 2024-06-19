@@ -1,0 +1,175 @@
+.carousel {
+  @include flex-columns;
+}
+
+.favorite__arrow-block {
+  @include flex-columns($justify-content: center);
+  width: 6rem;
+  height: 6rem;
+  border-radius: 10rem;
+  border: 1px solid $color-border-dark;
+  @extend %transition;
+
+  @include media-mobile {
+    display: none;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background: $color-background-container;
+      cursor: pointer;
+    }
+
+    &:hover > .favorite__arrow-svg {
+      stroke: $color-text-light;
+    }
+  }
+}
+
+.favorite__arrow-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.favorite__arrow-svg {
+  @extend %transition;
+  stroke: $color-text-dark;
+}
+
+.favorite__buttons-block {
+  @include flex-columns;
+  margin: 0 auto;
+  padding-top: 4rem;
+  width: 14rem;
+  height: 0.4rem;
+}
+
+.favorite__button {
+  width: 4rem;
+  height: 0.4rem;
+  border-radius: 10rem;
+  background-color: $color-border-light;
+
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.favorite__button-inner {
+  background-color: $color-border-dark;
+  height: 100%;
+  width: 0;
+}
+
+.slider {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 48rem;
+
+  @include media-mobile {
+    width: 34.8rem;
+  }
+}
+
+.slider-container {
+  position: relative;
+  display: flex;
+  width: 48rem;
+  left: 0;
+}
+
+.slider-container-animation {
+  animation-name: move;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move {
+  0% {
+    left: 0;
+  }
+
+  16% {
+    left: var(--secondPosition);
+  }
+
+  33% {
+    left: var(--secondPosition);
+  }
+
+  50% {
+    left: var(--thirdPosition);
+  }
+
+  66% {
+    left: var(--thirdPosition);
+  }
+
+  82% {
+    left: 0;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+.slider-container-animation-reverse {
+  animation-name: move-reverse;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move-reverse {
+  0% {
+    left: 0;
+  }
+
+  16% {
+    left: var(--thirdPosition);
+  }
+
+  33% {
+    left: var(--thirdPosition);
+  }
+
+  50% {
+    left: var(--secondPosition);
+  }
+
+  66% {
+    left: var(--secondPosition);
+  }
+
+  82% {
+    left: 0;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+.slider-container_stop-animation {
+  animation-play-state: paused;
+}
+
+.slider-container__animation-direction {
+  animation-direction: reverse;
+}
+
+.inner1 {
+  width: var(--width1);
+
+  transition: width 2s;
+}
+
+.inner2 {
+  transition: width 2s;
+}
+
+.inner3 {
+  transition: width 2s;
+}

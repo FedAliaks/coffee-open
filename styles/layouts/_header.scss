@@ -1,0 +1,149 @@
+.header {
+  position: relative;
+  @include flex-columns;
+  padding: 1.3rem 0 2rem;
+
+  @include media-tablet {
+    padding: 2rem 0 1.4rem;
+  }
+}
+
+.navigation {
+  flex-grow: 2;
+
+  @include media-burger {
+    display: none;
+  }
+}
+
+.header__navigation {
+  @include flex-columns($justify-content: center, $gap: 4.2rem);
+  width: 100%;
+}
+
+.header__navigation-item {
+  position: relative;
+  color: $color-text-dark;
+  font-weight: 600;
+  @extend %transition;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 0;
+    height: 0.2rem;
+    background-color: $color-text-dark;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: $color-text-light;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+.header__menu {
+  position: relative;
+
+  @media (hover: hover) {
+    &:hover {
+      cursor: default;
+    }
+  }
+
+  @include media-burger {
+    display: none;
+  }
+}
+
+.header__menu-content {
+  color: $color-text-dark;
+  font-weight: 600;
+
+  @media (hover: hover) {
+    &:hover::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      height: 0.2rem;
+      background-color: $color-text-dark;
+    }
+  }
+}
+
+.header__menu-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.header__menu_bordered::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  height: 0.2rem;
+  background-color: $color-text-dark;
+}
+
+.header__burger-container {
+  position: relative;
+}
+
+.header__burger-menu {
+  display: none;
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: 10rem;
+  border: 1px solid $color-border-dark;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 5px);
+    left: 15px;
+    width: 16px;
+    height: 2px;
+    background-color: $color-text-dark;
+    @extend %transition;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(50% + 5px);
+    left: 15px;
+    width: 16px;
+    height: 2px;
+    background-color: $color-text-dark;
+    @extend %transition;
+  }
+
+  @include media-burger {
+    display: block;
+  }
+}
+
+.header__burger-menu_open {
+  &::before {
+    top: calc(50% - 2px);
+    left: 12px;
+    width: 20px;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    top: calc(50% - 2px);
+    left: 12px;
+    width: 20px;
+    transform: rotate(-45deg);
+  }
+}

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/images/svg/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/style.scss" />
+    <title>Coffee Open</title>
+  </head>
+  <body>
+    <div class="body-wrapper">
+      <header>
+        <div class="wrapper header">
+          <div class="header__logo">
+            <a href="../index.html"
+              ><img src="../images/header/logo.png" alt="header-logo"
+            /></a>
+          </div>
+          <nav class="navigation">
+            <ul class="header__navigation">
+              <li class="header__navigation-item">
+                <a href="../index.html#favorite">Favorite coffee</a>
+              </li>
+              <li class="header__navigation-item">
+                <a href="../index.html#about">About</a>
+              </li>
+              <li class="header__navigation-item">
+                <a href="../index.html#mobile">Mobile app</a>
+              </li>
+              <li class="header__navigation-item">
+                <a href="#footer">Contact us</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__menu header__menu_bordered">
+            <span class="header__menu-content">Menu</span>
+            <svg class="header__menu-icon">
+              <use xlink:href="/images/svg/sprite.svg#coffee-cup-header"></use>
+            </svg>
+          </div>
+          <div class="header__burger-container">
+            <div class="header__burger-menu"></div>
+          </div>
+        </div>
+        <div class="burger burger_close">
+          <div class="burger-menu__container">
+            <p class="header__navigation-item burger__menu-item">
+              <a href="../index.html#favorite">Favorite coffee</a>
+            </p>
+            <p class="header__navigation-item burger__menu-item">
+              <a href="../index.html#about">About</a>
+            </p>
+            <p class="header__navigation-item burger__menu-item">
+              <a href="../index.html#mobile">Mobile app</a>
+            </p>
+            <p class="header__navigation-item burger__menu-item">
+              <a href="#footer">Contact us</a>
+            </p>
+          </div>
+        </div>
+      </header>
+      <section>
+        <div class="wrapper menu-section">
+          <h1 class="title__section menu__title">
+            Behind each of our cups hides an
+            <span class="title_accent">amazing surprise</span>
+          </h1>
+          <div class="menu__type-dishes-block">
+            <div
+              data-type-of-product="coffee"
+              class="button menu__button menu__button_active"
+            >
+              <div class="menu__button-content">
+                <div class="menu__button-emoji">
+                  <img
+                    src="/images/menu-section/coffee-small.png"
+                    alt="image"
+                  />
+                </div>
+                <p>Coffee</p>
+              </div>
+            </div>
+            <div data-type-of-product="tea" class="button menu__button">
+              <div class="menu__button-content">
+                <div class="menu__button-emoji">
+                  <img src="/images/menu-section/tea-small.png" alt="image" />
+                </div>
+                <p>Tea</p>
+              </div>
+            </div>
+            <div data-type-of-product="dessert" class="button menu__button">
+              <div class="menu__button-content">
+                <div class="menu__button-emoji">
+                  <img
+                    src="/images/menu-section/dessert-small.png"
+                    alt="image"
+                  />
+                </div>
+                <p>Dessert</p>
+              </div>
+            </div>
+          </div>
+          <div class="menu__cards-container"></div>
+
+          <div class="menu__refresh-button">
+            <svg class="menu__refresh-icon">
+              <use xlink:href="/images/svg//sprite.svg#refresh"></use>
+            </svg>
+          </div>
+        </div>
+      </section>
+      <footer id="footer">
+        <div class="wrapper footer-section">
+          <div class="footer-container">
+            <div class="footer__left-column">
+              <h2 class="footer__title">
+                Sip, Savor, Smile.
+                <span class="title_accent">It's coffee time!</span>
+              </h2>
+              <div class="footer__icons-block">
+                <div class="footer__icon">
+                  <svg class="footer__icon-social">
+                    <use xlink:href="/images/svg/sprite.svg#twitter"></use>
+                  </svg>
+                </div>
+                <div class="footer__icon">
+                  <svg class="footer__icon-social">
+                    <use xlink:href="/images/svg/sprite.svg#instagram"></use>
+                  </svg>
+                </div>
+                <div class="footer__icon">
+                  <svg class="footer__icon-social">
+                    <use xlink:href="/images/svg/sprite.svg#facebook"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="footer__right-column">
+              <h3 class="footer__subtitle">Contact us</h3>
+              <div class="footer__contact-block">
+                <div class="footer__contact footer__contact-active">
+                  <svg class="footer__icon-contact">
+                    <use xlink:href="/images/svg/sprite.svg#pin-alt"></use>
+                  </svg>
+                  <a
+                    class="footer__contact-description"
+                    href="https://www.google.com/maps/@62.3266342,-6.9414776,3a,75y,146.83h,92.99t/data=!3m8!1e1!3m6!1sAF1QipPGVMzfyjhEtW3tFmBM2SdbxPip1NKoVLsb1c2F!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPGVMzfyjhEtW3tFmBM2SdbxPip1NKoVLsb1c2F%3Dw203-h100-k-no-pi-10.3949585-ya32.945103-ro-0.13779277-fo100!7i6080!8i3040?entry=ttu"
+                    target="_blank"
+                    >8558 Green Rd., LA</a
+                  >
+                </div>
+                <div class="footer__contact footer__contact-active">
+                  <svg class="footer__icon-contact">
+                    <use xlink:href="/images/svg/sprite.svg#icon-phone"></use>
+                  </svg>
+                  <a
+                    class="footer__contact-description"
+                    href="tel:+11111111111111"
+                    >+1 (603) 555-0123</a
+                  >
+                </div>
+                <div class="footer__contact">
+                  <svg class="footer__icon-contact">
+                    <use xlink:href="/images/svg/sprite.svg#icon-clock"></use>
+                  </svg>
+                  <p class="footer__contact-description">
+                    Mon-Sat: 9:00 AM – 23:00 PM
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="popup modal__close"></div>
+    </div>
+
+    <script type="module" src="/menu/menu.js"></script>
+  </body>
+</html>
